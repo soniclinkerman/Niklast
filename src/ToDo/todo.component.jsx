@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DisplayInput from "../DisplayInput/display-input.component";
-import CreateTasks from "../CreateTasks/create-tasks.component";
+import DisplayInput from "./DisplayInput/display-input.component";
+import CreateTasks from "./CreateTasks/create-tasks.component";
 
 function ToDo() {
   const [tasks, setTasks] = useState([]);
