@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
-import Button from '../../Button/button.component';
-import UserInput from "../UserInput/user-input.component"
+import React, { useState } from "react";
+import DisplayInput from "../DisplayInput/display-input.component";
+import CreateTasks from "../CreateTasks/create-tasks.component";
 
-function ToDo(){
-  const [input, setInput] = useState("");
+function ToDo() {
+  const [tasks, setTasks] = useState([]);
 
-  const onInputChange = (e) => {setInput(e.target.value)}
-
+  function addTask(newTask) {
+    setTasks((prevTasks) => {
+      return [...prevTasks, newTask];
+    });
+  }
   return (
-    <div className="App">
-
-      <UserInput
-      type="text"
-      value={input}
-      onChange={onInputChange}/>
-
-      <Button text={"Add"} onClick={() => alert("Hello")}/>
-
-     
+    <div>
+      <CreateTasks onAdd={addTask} />
+      <DisplayInput display={tasks} />
     </div>
   );
 }

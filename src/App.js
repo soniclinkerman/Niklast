@@ -1,12 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import ToDo from './ToDo/Todo/todo.component';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import ToDo from "./ToDo/Todo/todo.component";
 
 function App() {
   return (
     <div className="App">
-      <ToDo/>
+      <ToDo />
     </div>
   );
 }
