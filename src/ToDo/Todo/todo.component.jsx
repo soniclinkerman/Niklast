@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '../../Button/button.component';
 import UserInput from "../UserInput/user-input.component"
 
 function ToDo(){
@@ -8,10 +9,15 @@ function ToDo(){
 
   return (
     <div className="App">
+
       <UserInput
       type="text"
       value={input}
       onChange={onInputChange}/>
+
+      <Button text={"Add"} onClick={() => alert("Hello")}/>
+
+     
     </div>
   );
 }
